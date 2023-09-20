@@ -8,7 +8,6 @@ export class App extends Component {
   };
 
   handleGoodFeedbackIncrementClick = evt => {
-    console.log('evt', evt);
     this.setState(prevState => {
       return {
         good: prevState.good + 1,
@@ -30,6 +29,15 @@ export class App extends Component {
         bad: prevState.bad + 1,
       };
     });
+  };
+
+  countTotalFeedback = () => {
+    return this.state.good + this.state.neutral + this.state.bad;
+  };
+
+  countPositiveFeedbackPercentage = () => {
+    if (this.countTotalFeedback() === 0) return 0;
+    return ((this.state.good / this.countTotalFeedback()) * 100).toFixed();
   };
 
   render() {
@@ -54,6 +62,13 @@ export class App extends Component {
             </li>
             <li>
               Bad: <span>{this.state.bad}</span>
+            </li>
+            <li>
+              Total: <span>{this.countTotalFeedback()}</span>
+            </li>
+            <li>
+              Positive feedbacks:
+              <span> {this.countPositiveFeedbackPercentage()}%</span>
             </li>
           </ul>
         </div>
