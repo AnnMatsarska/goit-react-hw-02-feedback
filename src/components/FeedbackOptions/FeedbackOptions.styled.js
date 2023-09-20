@@ -14,7 +14,7 @@ export const Button = styled.button`
     background-color: rgb(49, 136, 194);
   }
   &[name='neutral']:hover {
-    background-color: #f5ce13;
+    background-color: rgba(232, 220, 59);
   }
   &[name='bad']:hover {
     background-color: brown;

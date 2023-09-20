@@ -14,20 +14,20 @@ export const Item = styled.li`
   border-radius: 4px;
 
   &.blue {
-    background-color: rgb(49, 136, 194);
-    color: white;
+    background-color: rgb(49, 136, 194, 0.581);
+    color: black;
   }
   &.yellow {
-    background-color: #f5ce13;
-    color: white;
+    background-color: rgba(232, 220, 59, 0.729);
+    color: black;
   }
   &.red {
     margin-bottom: 25px;
-    background-color: brown;
-    color: white;
+    background-color: rgba(187, 52, 52, 0.483);
+    color: black;
   }
   &.grey {
-    background-color: rgba(121, 121, 121, 0.581);
+    background-color: rgb(203, 203, 203);
     color: black;
   }
 `;
